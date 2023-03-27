@@ -1,0 +1,43 @@
+{
+  "step-types": {
+      "script-module-step": [
+          {
+              "@type-id": "custom.ProductDetails",
+              "@supports-parallel-execution": "false",
+              "@supports-site-context": "true",
+              "@supports-organization-context": "false",
+              "description": "This script export all products of current Site into csv.",
+              "module": "app_custom_assignment4/cartridge/scripts/steps/JobSiteProducts.js",
+              "function": "getSiteProducts",
+              "transactional": "true",
+              "timeout-in-seconds": "900",
+              "parameters": {
+                  "parameter": [
+                      {
+                          "@name": "CategoryID",
+                          "@type": "string",
+                          "@required": "true",
+                          "description": "Category ID for getting products of that category."
+                      }
+                  ]
+              },
+              "status-codes": {
+                  "status": [
+                      {
+                          "@code": "ERROR",
+                          "description": "Used when the step failed with an error."
+                      },
+                      {
+                          "@code": "FINISHED",
+                          "description": "Used when the step finished successfully."
+                      },
+                      {
+                          "@code": "FINISHED_WITH_WARNINGS",
+                          "description": "Used when the step finished with warnings."
+                      }
+                  ]
+              }
+          }      
+      ]
+  }
+}

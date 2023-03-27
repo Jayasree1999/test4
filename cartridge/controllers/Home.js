@@ -29,7 +29,7 @@ server.append('Show', function (req, res, next) {
     }
 
     viewData = ({
-       allproductDetails:allproductDetails
+       allproductDetails:allproductDetails.reverse()
         
     })
   

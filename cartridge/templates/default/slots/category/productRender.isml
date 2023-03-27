@@ -1,0 +1,20 @@
+<h1>${slotcontent.content[0].displayName}</h1>
+<isset name="category" value="${slotcontent.content[0]}" scope="page" />
+<div class="row">
+    <isloop items="${category.subCategories[0].subCategories[0].products}" var="products" end="4" status="loopState">
+            <div class="col-6">
+                <isinclude url="${URLUtils.url('Tile-Show', 'pid', products.ID, 'swatches', true, 'ratings', true, 'compare', false, 'showQuickView', false)}" />
+            </div>
+    </isloop>
+</div>
+
+
+
+
+
+
+
+
+
+
+
